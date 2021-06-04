@@ -18,14 +18,16 @@ public class Player : MonoBehaviour
     void Start()
     {
         SetRandomColor();
-		Time.timeScale = 0;
+		//Time.timeScale = 0;
+		rb.gravityScale = 0;
 	}
 
     private void OnGUI()
     {
 		if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0))
 		{
-			Time.timeScale = 1;
+			//Time.timeScale = 1;
+			rb.gravityScale = 3;
 		}
 	}
     void Update()
